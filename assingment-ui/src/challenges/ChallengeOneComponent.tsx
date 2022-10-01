@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Box, Grid, Typography, TextField, Button } from "@mui/material";
 import axios from "axios";
+import EmployeeTable from "./EmployeeTable";
 
 export default function ChallengeOneComponent() {
   const [selectedFile, setSelectedFile] = useState<string>();
@@ -58,6 +59,8 @@ export default function ChallengeOneComponent() {
       >
         Submit
       </Button>
+
+      <EmployeeTable />
     </Box>
   );
 }
