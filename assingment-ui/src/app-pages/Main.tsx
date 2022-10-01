@@ -22,7 +22,7 @@ export default function Main() {
           borderColor: "divider",
         }}
       >
-        <Typography sx={{textAlign: "CenterFocusStrong",}} variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom>
           Back-End Coding Challenges
         </Typography>
       </Box>
@@ -35,7 +35,24 @@ export default function Main() {
           borderColor: "divider",
         }}
       >
+        <Typography variant="h4" gutterBottom>
+          Challenge 01
+        </Typography>
         <ChallengeOneComponent />
+      </Box>
+      <Box
+        sx={{
+          px: "20px",
+          pb: 4,
+          pt: 2.5,
+          borderBottom: 2,
+          borderColor: "divider",
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          Challenge 02
+        </Typography>
+        <ChallengeTwoComponent />
       </Box>
     </>
   );
