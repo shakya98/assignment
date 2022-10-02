@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class CompanyLocation extends Model
 {
     use HasFactory;
+
+    public function company(){
+        return $this->belongsTo('App\Models\ComponyOrganization\Company');
+    }
 }
