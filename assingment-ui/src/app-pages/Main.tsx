@@ -54,6 +54,20 @@ export default function Main() {
         </Typography>
         <ChallengeTwoComponent />
       </Box>
+      <Box
+        sx={{
+          px: "20px",
+          pb: 4,
+          pt: 2.5,
+          borderBottom: 2,
+          borderColor: "divider",
+        }}
+      >
+        <Typography variant="h4" gutterBottom>
+          Challenge 04
+        </Typography>
+        <ChallengeFourComponent />
+      </Box>
     </>
   );
 }
