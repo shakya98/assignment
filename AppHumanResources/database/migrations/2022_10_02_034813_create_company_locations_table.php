@@ -15,6 +15,7 @@ class CreateCompanyLocationsTable extends Migration
     {
         Schema::create('company_locations', function (Blueprint $table) {
             $table->id();
+            $table->string('location_name')->nullable();
             $table->timestamps();
         });
     }

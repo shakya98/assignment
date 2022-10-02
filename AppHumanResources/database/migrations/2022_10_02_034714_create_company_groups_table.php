@@ -15,6 +15,8 @@ class CreateCompanyGroupsTable extends Migration
     {
         Schema::create('company_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('group_name')->nullable();
+            $table->integer('group_head_employee_id')->nullable();
             $table->timestamps();
         });
     }

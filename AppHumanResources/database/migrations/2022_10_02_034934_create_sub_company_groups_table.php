@@ -15,6 +15,8 @@ class CreateSubCompanyGroupsTable extends Migration
     {
         Schema::create('sub_company_groups', function (Blueprint $table) {
             $table->id();
+            $table->string('sub_group_division')->nullable();
+            $table->integer('company_group_id')->nullable();
             $table->timestamps();
         });
     }
