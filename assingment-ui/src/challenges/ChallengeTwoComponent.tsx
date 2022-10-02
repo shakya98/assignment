@@ -22,31 +22,35 @@ export default function ChallengeTwoComponent() {
   }
 
   return (
-    <Box component={"div"}>
-      <Grid item xs={12} sm={12}>
-        <input type="text" ref={inputRef} />
-        <Button
-          variant="contained"
-          id="btn1"
-          value="Add"
-          onClick={handleClick}
-          sx={{ height: "30px", ml: 3 }}
-        >
-          Enter the number
-        </Button>
-      </Grid>{" "}
-      <Grid>
-        <Button variant="contained" onClick={calculateOccurance} sx={{ mt: 3 }}>
-          Proceed
-        </Button>
-        <Typography variant="h6" sx={{ mt: 3 }}>
-          {" "}
-          Numbers you have Entered : {displayArray?.join(", ")}
-        </Typography>
-        <Typography variant="h6" sx={{ mt: 3 }}>
-          Numbers you have repeated : {occuranceArray?.join(", ")}
-        </Typography>
-      </Grid>
+    <Box id="fileMain" component={"div"}>
+      <Box className="fileRight" id="file" component={"div"}>
+        <Grid item xs={12} sm={12}>
+          <input type="text" ref={inputRef} />
+          <Button
+            variant="contained"
+            id="btn1"
+            value="Add"
+            onClick={handleClick}
+          >
+            Enter the number
+          </Button>
+        </Grid>{" "}
+      </Box>
+      <Box className="fileRight" id="file" component={"div"}>
+        <Grid>
+          <Button className="proceedBtn" id="btn2" variant="contained" onClick={calculateOccurance}>
+            Proceed
+          </Button>
+
+          <Typography id="para" variant="h6" sx={{ mt: 3 }}>
+            {" "}
+            Numbers you have Entered : {displayArray?.join(", ")}
+          </Typography>
+          <Typography id="para" variant="h6" sx={{ mt: 3 }}>
+            Numbers you have repeated : {occuranceArray?.join(", ")}
+          </Typography>
+        </Grid>
+      </Box>
     </Box>
   );
 }

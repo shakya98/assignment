@@ -28,39 +28,45 @@ export default function ChallengeOneComponent() {
       });
   };
   return (
-    <Box component={"div"}>
-      <Grid item xs={12} sm={6}>
-        <Typography
-          variant="body1"
-          sx={{
-            pt: "20px",
-            fontWeight: "bold",
-          }}
+    <Box id="fileMain" component={"div"}>
+      <Box className="fileLeft" id="file" component={"div"}>
+        <Grid item xs={12} sm={6}>
+          <Typography
+            id="para"
+            variant="h6"
+            sx={{
+              pt: "20px",
+              fontWeight: "bold",
+            }}
+          >
+            Upload Data file
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            margin="normal"
+            required
+            fullWidth
+            name="csvFile"
+            type="file"
+            onChange={changeHandler}
+            inputProps={{ accept: ".csv" }}
+            sx={{ pt: 1, pb: 2, width: "400px" }}
+          />
+        </Grid>
+        <Button
+          id="btn2"
+          className="proceedBtn"
+          variant="contained"
+          onClick={handleSubmit}
+          disabled={selectedFile === undefined}
         >
-          Upload Data file
-        </Typography>
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TextField
-          margin="normal"
-          required
-          fullWidth
-          name="csvFile"
-          type="file"
-          onChange={changeHandler}
-          inputProps={{ accept: ".csv" }}
-          sx={{ pt: 1, pb: 2, width: "400px" }}
-        />
-      </Grid>
-      <Button
-        variant="contained"
-        onClick={handleSubmit}
-        disabled={selectedFile === undefined}
-      >
-        Submit
-      </Button>
-
-      <EmployeeTable />
+          Submit
+        </Button>
+      </Box>
+      <Box className="fileRight" id="file" component={"div"}>
+        <EmployeeTable />
+      </Box>
     </Box>
   );
 }

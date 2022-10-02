@@ -4,7 +4,6 @@ import ChallengeTwoComponent from "../challenges/ChallengeTwoComponent";
 import ChallengeFourComponent from "../challenges/ChallengeFourComponent";
 
 export default function Main() {
-
   return (
     <>
       <Box
@@ -16,7 +15,7 @@ export default function Main() {
           borderColor: "divider",
         }}
       >
-        <Typography variant="h3" gutterBottom>
+        <Typography id="title" variant="h3" gutterBottom>
           Back-End Coding Challenges
         </Typography>
       </Box>
@@ -29,7 +28,7 @@ export default function Main() {
           borderColor: "divider",
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography id="subtitle" variant="h4" gutterBottom>
           Challenge 01
         </Typography>
         <ChallengeOneComponent />
@@ -43,7 +42,7 @@ export default function Main() {
           borderColor: "divider",
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography id="subtitle" variant="h4" gutterBottom>
           Challenge 02
         </Typography>
         <ChallengeTwoComponent />
@@ -57,7 +56,7 @@ export default function Main() {
           borderColor: "divider",
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography id="subtitle" variant="h4" gutterBottom>
           Challenge 04
         </Typography>
         <ChallengeFourComponent />

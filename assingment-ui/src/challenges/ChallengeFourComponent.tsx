@@ -23,7 +23,7 @@ export default function ChallengeFourComponent() {
       {data &&
         data.map((item, index) => (
           <Stack direction="row" key={index}>
-            <Typography>{JSON.stringify(item)}</Typography>
+            <Typography id="arrayData">{JSON.stringify(item)}</Typography>
           </Stack>
         ))}
     </Box>
