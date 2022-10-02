@@ -1,16 +1,10 @@
 import { Box, Typography } from "@mui/material";
-import { SyntheticEvent, useState } from "react";
 import ChallengeOneComponent from "../challenges/ChallengeOneComponent";
 import ChallengeTwoComponent from "../challenges/ChallengeTwoComponent";
 import ChallengeFourComponent from "../challenges/ChallengeFourComponent";
-import { CenterFocusStrong } from "@mui/icons-material";
 
 export default function Main() {
-  const [value, setValue] = useState<number>(0);
 
-  const handleChange = (event: SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
   return (
     <>
       <Box
